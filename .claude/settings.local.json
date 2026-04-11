@@ -58,7 +58,9 @@
       "WebFetch(domain:dbtr.co)",
       "WebFetch(domain:www.tunepocket.com)",
       "WebFetch(domain:designbetterpodcast.com)",
-      "WebFetch(domain:ytlarge.com)"
+      "WebFetch(domain:ytlarge.com)",
+      "WebFetch(domain:www.amazon.science)",
+      "WebFetch(domain:smashingmagazine.com)"
     ]
   }
 }
