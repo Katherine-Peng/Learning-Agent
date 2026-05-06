@@ -22,7 +22,13 @@ Fetch the Notion page `31982e5a-5fa3-809b-bb66-c3bc6015a92b` (AI Learning Plan �
 **This is the single source of truth for what Katherine is learning.** She may manually add content here that isn't in the source list or previously-recommended log. Any URL that appears anywhere in this checklist — whether added by you or by Katherine — must be treated as already-consumed and excluded from recommendations.
 
 From this page, determine:
-1. **Current week number**: Find the most recent week that has a mix of checked `[x]` and unchecked `[ ]` items. That's the current week.
+1. **Current week number**: Scan all weeks in the checklist. Find the **first week where ALL items are still unchecked** (zero `[x]` items) — this is the week Katherine should be working on now. That's the current week.
+   
+   Why: Katherine often leaves optional items unchecked in past weeks. Don't treat a partially-complete old week as "current" — look for the frontier where new work begins.
+   
+   Edge cases:
+   - If every week has at least one `[x]` → use the highest-numbered week
+   - If Week 1 has no `[x]` items → use Week 1
 2. **URLs already in the plan**: Extract ALL URLs from the entire checklist (all weeks). These are excluded from recommendations, even if they don't appear in previously-recommended.md.
 3. **Current week's topic**: Note the week title and content focus (e.g., "Week 2 · Attention, transformers + Learning Partner Agent v1").
 

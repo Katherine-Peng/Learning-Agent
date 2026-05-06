@@ -65,3 +65,20 @@ https://blog.langchain.com/production-agents-self-heal/
 https://www.youtube.com/watch?v=D4XTefP3Lsc
 https://www.deloitte.com/us/en/insights/topics/talent/human-capital-trends/2026/human-ai-interaction-design.html
 https://newsletter.uxdesign.cc/p/on-rational-thinking-taking-action
+
+# Week 6 — 2026-04-20
+https://maggieappleton.com/zero-alignment/
+https://www.youtube.com/watch?v=QVJcdfkRpH8
+https://www.youtube.com/watch?v=yyuVR-ML9X8
+https://www.youtube.com/watch?v=GEJIDLeNYXE
+https://jakobnielsenphd.substack.com/p/ai-use
+https://arxiv.org/abs/2603.13417
+https://jack-clark.net/2026/04/13/import-ai-453-breaking-ai-agents-mirrorcode-and-ten-views-on-gradual-disempowerment/
+
+# Week 7 — 2026-05-03
+https://www.youtube.com/watch?v=wUWljYoQN8g
+https://smashingmagazine.com/2026/05/designing-stable-interfaces-streaming-content/
+https://www.microsoft.com/en-us/research/blog/red-teaming-a-network-of-agents-understanding-what-breaks-when-ai-agents-interact-at-scale/
+https://www.youtube.com/watch?v=mCO-D3pkviM
+https://simonwillison.net/2025/Jun/27/context-engineering/
+https://uxdesign.cc/the-web-trained-ai-to-deceive-now-designers-have-to-untrain-it-420f9d3fe78e
