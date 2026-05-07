@@ -67,7 +67,9 @@
       "WebFetch(domain:smartscope.blog)",
       "WebFetch(domain:interactions.acm.org)",
       "WebFetch(domain:www.deepset.ai)",
-      "mcp__scheduled-tasks__update_scheduled_task"
+      "mcp__scheduled-tasks__update_scheduled_task",
+      "WebFetch(domain:itsadelriodesign.medium.com)",
+      "WebFetch(domain:www.chatprd.ai)"
     ]
   }
 }
