@@ -56,3 +56,27 @@
 | 47 | Harrison Chase | 2 | Agents | Blog | blog.langchain.dev | https://blog.langchain.dev/rss/ | Surface architecture posts. Skip product announcements. |
 | 48 | Nadia Piet / AIxDESIGN | 2 | Design x AI | Blog | aixdesign.co | | Manual check monthly. Surface toolkit updates. |
 | 49 | Design Better | 2 | Design Leadership | YouTube | youtube.com/@designbetterpod | https://www.youtube.com/feeds/videos.xml?channel_id=UCMVvDE1tbXNoOpoUaMk6iUw | Casual viewing. Surface design leadership + AI design interviews. Skip episodes on non-AI topics unless guest is exceptional. |
+| 50 | Aakash Gupta — Product Growth | 2 | Product | Substack | news.aakashg.com | https://www.news.aakashg.com/feed | Surface AI-for-PM posts: evals for PMs, AI product playbooks, agent product strategy. Practitioner PM voice — Lenny-tier for product. Skip pure career/interview-prep posts. (Feed verified live 2026-06.) |
+| 51 | Hard Fork (NYT) | 2 | Strategy / Culture | Podcast | nytimes.com/column/hard-fork | https://feeds.simplecast.com/l2i9YnTd | Kevin Roose + Casey Newton. Audio-only (no YouTube) — judge from episode title + description. Surface AI policy, product launches, agent/Copilot, and AI-culture segments. Skip non-AI tech-news episodes. (Feed verified live 2026-06.) |
+| 52 | Every — "AI & I" (Dan Shipper) | 2 | Building / Product | Podcast + Essays | every.to/podcast · every.to/@danshipper | No RSS — manual | How real people (founders, writers, designers) actually use AI day-to-day. No clean RSS on Every's platform. Manual/discovery: WebFetch every.to/podcast + the AI & I YouTube playlist (PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL), and lean on web search for "Dan Shipper" / "AI & I". Closest in spirit to Lenny. |
+
+---
+
+## X / Twitter builders — "AI Signal" list
+
+Curated handles to check as a **secondary, best-effort** signal (see the X step in `weekly-briefing.md`).
+**Limitation:** without the paid X API we can't read full timelines — only posts indexed by web search surface. Treat as a thin bonus, never a primary source. Drawn from voices already trusted elsewhere on this list, biased toward builders / designers / product (not just engineering). Edit this table to add/remove people — the agent reads it each run.
+
+| Tier | Handle | Who | Why |
+|------|--------|-----|-----|
+| 1 | @karpathy | Andrej Karpathy | Foundational AI explainers; any substantive thread is high-signal. |
+| 1 | @simonw | Simon Willison | MCP, agents, practical LLM engineering — posts constantly. |
+| 1 | @emollick | Ethan Mollick | AI-at-work research and experiments, design-accessible. |
+| 1 | @mappletons | Maggie Appleton | Design × AI, interface metaphors, tools for thought. |
+| 1 | @Wattenberger | Amelia Wattenberger | AI interface design, post-chatbot UI thinking. |
+| 1 | @lennysan | Lenny Rachitsky | Product + AI, builder interviews. |
+| 2 | @swyx | Shawn Wang | Latent Space; AI-engineering ecosystem and agents. |
+| 2 | @petergyang | Peter Yang | Builder/PM tutorials, agent + Copilot takes. |
+| 2 | @aakashg0 | Aakash Gupta | AI for PMs, evals, product playbooks. |
+| 2 | @danshipper | Dan Shipper | Every / AI & I — how people actually use AI. |
+| 2 | @hwchase17 | Harrison Chase | LangChain; agent architecture. |

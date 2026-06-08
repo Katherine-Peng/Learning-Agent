@@ -6,10 +6,22 @@ You are Katherine's Learning Partner Agent. Your job is to find the highest-qual
 
 ---
 
+## STEP 0 — Sync repo state (1 tool call)
+
+This task runs on more than one machine (Katherine's laptop + a cloud fallback). Before reading anything, pull the latest committed state so the dedup log is current:
+
+```
+git pull --rebase
+```
+
+If this fails (no network, or not a git checkout), continue anyway — the run still works, it just may not see the very latest dedup entries.
+
+---
+
 ## STEP 1 — Read context (2 tool calls)
 
 ### 1a. Read the local source list
-Read the file at `./config/sources.md`. This contains 48 curated sources with Name, Tier, Category, Type, URL, Feed URL, and Agent Notes.
+Read the file at `./config/sources.md`. This contains the curated sources (Name, Tier, Category, Type, URL, Feed URL, Agent Notes) plus a **## X / Twitter builders** section at the bottom with curated X handles to check.
 
 **Important:** Some Feed URLs may still have backtick formatting — strip backticks before using with WebFetch.
 
@@ -31,6 +43,11 @@ From this page, determine:
    - If Week 1 has no `[x]` items → use Week 1
 2. **URLs already in the plan**: Extract ALL URLs from the entire checklist (all weeks). These are excluded from recommendations, even if they don't appear in previously-recommended.md.
 3. **Current week's topic**: Note the week title and content focus (e.g., "Week 2 · Attention, transformers + Learning Partner Agent v1").
+
+### 1d. Idempotency guard — don't double-post
+Fetch the **Learning Agent Recommendation** parent page (`33f82e5a-5fa3-8062-9bf2-c019bf572c5f`). If a child page titled `Weekly Picks — Week {N}` for the **current week** already exists and was created in the last 3 days, **stop now** — a run already succeeded this week (likely the laptop run, if this is the cloud fallback). Append a one-line note to `./logs/run-{YYYY-MM-DD}.md` ("skipped — Week {N} already posted {date}") and exit without creating a new page or sending a notification.
+
+Otherwise, continue.
 
 ---
 
@@ -61,11 +78,11 @@ Filter for posts published in the last 7 days. Record: title, URL, published dat
 For sources marked "No RSS — manual" in Agent Notes (e.g., #17 Microsoft HAX, #24 Emily Campbell, #25 Amelia Wattenberger), WebFetch their homepage URL and check for new content.
 
 **X / Twitter** (secondary source — WebSearch only):
-For the top 5 Tier 1 individuals, run WebSearch queries:
+Read the **## X / Twitter builders** section in `sources.md` for the curated handle list. For each handle (at least the Tier 1 ones), run a WebSearch:
 ```
-site:x.com "{person name}" {current week primary topic} after:{7 days ago date}
+from:{handle} {current week primary topic} (site:x.com OR site:twitter.com) after:{7 days ago date}
 ```
-Only surface posts that got enough traction to be indexed by search.
+**Important limitation — this is not a real timeline follow.** Without the paid X API we can only surface posts that got enough traction to be indexed by search, so treat X as a thin bonus signal, never a primary source. Don't let sparse X results count as a failure in Source Health — report `X: OK` if the searches ran, even if they returned little.
 
 ### 2b. EVERGREEN SCAN — Best of the last 18 months
 
@@ -316,6 +333,32 @@ Duration: {approximate}
 
 ---
 
+## STEP 7 — Notify Katherine (1 tool call)
+
+After the Notion page is created, call the **PushNotification** tool. This is the only ping Katherine gets — a desktop notification always, plus her phone if the Claude app is paired (Remote Control). **Do not skip it.**
+
+- `status`: `"proactive"`
+- `message`: one line, under 200 characters, no markdown. Use this shape:
+  `📬 Week {N} picks ready — {must_read_count} must-read, {total} items, ~{H}h{M}m. {notion_page_url}`
+
+If the PushNotification tool isn't available in this environment, note that in the run log and continue.
+
+---
+
+## STEP 8 — Commit and push state (1–2 tool calls)
+
+So the laptop and cloud runs share the same dedup state, commit the files you updated and push:
+
+```
+git add config/previously-recommended.md logs/
+git commit -m "Week {N} briefing — {YYYY-MM-DD}"
+git push
+```
+
+If the push fails (no network/auth), leave the commit in place and note it in the run log — the next run's `git pull` / push will reconcile.
+
+---
+
 ## Quality checklist (self-check before finishing)
 
 Before creating the Notion page, verify:
@@ -330,3 +373,5 @@ Before creating the Notion page, verify:
 - [ ] Checklist at bottom has ALL of: tier emoji, title, estimated time, full URL for EVERY item
 - [ ] Total estimated reading time in header is the sum of all item times
 - [ ] Hard cap of 7 items total is respected
+- [ ] Idempotency guard checked (STEP 1d) — not re-posting a week that already ran
+- [ ] PushNotification sent (STEP 7) and state committed + pushed (STEP 8)
