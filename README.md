@@ -110,6 +110,13 @@ Full list with feed URLs: [`config/sources.md`](https://github.com/Katherine-Pen
 
 # 🚀 Setup
 
+## Scheduling: where it runs
+
+There are two ways to run this on a schedule:
+
+- **☁️ Cloud Routine (recommended) — runs even with your laptop closed.** Create a [Claude Code Routine](https://claude.ai/code/routines): point it at this repo, set the trigger to **Weekly · Sunday · 7:00 PM** (your local time), set the environment's **Network access to Full** (the briefing fetches ~40 RSS/web sources), and keep the **Notion** connector enabled. The routine runs `prompts/weekly-briefing.md`, writes that week's picks to your Notion **Learning Agent Recommendation** page, and @mentions you so Notion pushes a notification to your phone. Note: routines clone your repo's **default branch**, so merge prompt changes to `main` before they take effect.
+- **💻 Local Desktop scheduled task — runs on your machine.** Use the manual steps below if you'd rather it run locally (requires your machine to be on).
+
 ## Option A — Let Claude Code install it for you (recommended)
 
 If you already have [Claude Code](https://docs.anthropic.com/en/docs/claude-code) on your laptop, this is by far the easiest way. You don't follow any steps yourself — just send Claude Code this repo URL and ask it to install:

@@ -6,15 +6,15 @@ You are Katherine's Learning Partner Agent. Your job is to find the highest-qual
 
 ---
 
-## STEP 1 — Read context (2 tool calls)
+## STEP 1 — Read context (read all sources below before scanning)
 
 ### 1a. Read the local source list
-Read the file at `./config/sources.md`. This contains 48 curated sources with Name, Tier, Category, Type, URL, Feed URL, and Agent Notes.
+Read the file at `./config/sources.md`. This contains the curated source list — each row has Name, Tier, Category, Type, URL, Feed URL, and Agent Notes. Rows marked `REMOVED` (currently #12 and #29) should be skipped.
 
 **Important:** Some Feed URLs may still have backtick formatting — strip backticks before using with WebFetch.
 
-### 1b. Read the previously-recommended log
-Read `./config/previously-recommended.md`. Every URL listed here has already been recommended — exclude them from this week's briefing.
+### 1b. Read the previously-recommended log (best-effort seed)
+Read `./config/previously-recommended.md` if it exists. Treat it as a best-effort seed of already-recommended URLs — **not** the source of truth. In cloud runs this file may be stale (a fresh clone won't include picks from runs that weren't committed back). The authoritative dedup sources are the Notion Weekly Checklist (1c) and the recent briefing pages (1d).
 
 ### 1c. Read the Weekly Checklist from Notion (single source of truth)
 Fetch the Notion page `31982e5a-5fa3-809b-bb66-c3bc6015a92b` (AI Learning Plan — Weekly Checklist).
@@ -32,15 +32,16 @@ From this page, determine:
 2. **URLs already in the plan**: Extract ALL URLs from the entire checklist (all weeks). These are excluded from recommendations, even if they don't appear in previously-recommended.md.
 3. **Current week's topic**: Note the week title and content focus (e.g., "Week 2 · Attention, transformers + Learning Partner Agent v1").
 
+### 1d. Read recent briefing pages from Notion (authoritative dedup)
+Fetch the **Learning Agent Recommendation** page (`33f82e5a-5fa3-8062-9bf2-c019bf572c5f`) and open its most recent ~6 child pages (prior "Weekly Picks" briefings). Extract every URL they recommended and add it to the exclusion set. This is the durable dedup memory — it does not depend on any local file being committed back after a run.
+
 ---
 
 ## STEP 2 — Collect content (two parallel scans)
 
 Run two complementary scans. Budget your tool calls carefully:
 - **YouTube RSS**: ~13 WebFetch calls (one per channel)
-- **Blog/Substack RSS**: ~8 WebFetch calls (Tier 1 feeds)
-- **X WebSearch**: ~3 calls (Tier 1 names only)
-- **Broad discovery**: ~3 WebSearch calls
+- **Blog/Substack RSS**: ~8 WebFetch calls (Tier 1 feeds)- **Broad discovery**: ~3 WebSearch calls
 - **Evergreen scan**: ~3 WebSearch calls
 - **YouTube engagement check**: ~3-5 WebFetch calls (top candidates only)
 - **Notion write**: 1 call
@@ -59,14 +60,6 @@ For each Tier 1 source with a Feed URL (not YouTube), WebFetch the RSS/Atom feed
 Filter for posts published in the last 7 days. Record: title, URL, published date, author, description/summary.
 
 For sources marked "No RSS — manual" in Agent Notes (e.g., #17 Microsoft HAX, #24 Emily Campbell, #25 Amelia Wattenberger), WebFetch their homepage URL and check for new content.
-
-**X / Twitter** (secondary source — WebSearch only):
-For the top 5 Tier 1 individuals, run WebSearch queries:
-```
-site:x.com "{person name}" {current week primary topic} after:{7 days ago date}
-```
-Only surface posts that got enough traction to be indexed by search.
-
 ### 2b. EVERGREEN SCAN — Best of the last 18 months
 
 Run 3-5 targeted WebSearch queries focused on the current week's primary topic:
@@ -193,7 +186,7 @@ Create a child page under the **Learning Agent Recommendation** page (`33f82e5a-
 
 ```
 **Generated:** {date} | **Focus:** {week_topic}
-**Sources checked:** YouTube ({n} channels), Blogs/RSS ({n}), Web ({n} searches), X ({n} accounts)
+**Sources checked:** YouTube ({n} channels), Blogs/RSS ({n}), Web ({n} searches)
 **Estimated total reading time:** ~{N} hours {M} min
 
 ---
@@ -254,7 +247,7 @@ Create a child page under the **Learning Agent Recommendation** page (`33f82e5a-
 {2-3 sentences noting patterns: "Multiple voices discussed X this week", "New tool launched relevant to Week N", "Emerging debate about Y"}
 
 ## 🔧 Source Health
-YouTube: {OK/Degraded/Failed} | Blogs/RSS: {OK/Degraded/Failed} | Web: {OK/Degraded/Failed} | X: {OK/Degraded/Failed}
+YouTube: {OK/Degraded/Failed} | Blogs/RSS: {OK/Degraded/Failed} | Web: {OK/Degraded/Failed}
 {Note any feeds that returned errors or empty results}
 
 ---
@@ -279,9 +272,11 @@ CRITICAL: Every checklist item MUST include ALL of these — missing any is a bu
 
 ---
 
-## STEP 5 — Update the dedup log
+## STEP 5 — Update the dedup log (best-effort)
 
 After writing the briefing, append all recommended URLs (Must Read + Recommended + Discovered + Wild Card) to `./config/previously-recommended.md`.
+
+**Note:** The durable dedup record is Notion (the new briefing page plus the prior pages read in Step 1d), because cloud runs start from a fresh clone and can only push to a `claude/` branch. Updating this file is a best-effort convenience for local runs — don't rely on it persisting, and don't block or fail the run trying to commit it.
 
 Format: one URL per line, with a date comment:
 ```
@@ -313,6 +308,18 @@ Dropped: {count}
 Errors: {list any feed/search failures}
 Duration: {approximate}
 ```
+
+---
+
+## STEP 7 — Notify Katherine on her phone
+
+After the briefing page exists, send a notification so Katherine sees it on her phone:
+
+1. **Notion @mention (primary, reliable).** Post a comment on the **newly created** Weekly Picks page with `notion-create-comment`, tagging Katherine via a `rich_text` user mention (user id `5efdb4b6-c7ef-433b-89f4-5cb49d245f7b`) so Notion pushes it to her mobile app. Keep it to one line — week number, number of picks, and the page URL. Shape:
+   - text: "📬 Your Week {N} picks are ready ({X} items) — "
+   - mention: user `5efdb4b6-c7ef-433b-89f4-5cb49d245f7b`
+   - text: " {page_url}"
+2. **Claude push (best-effort).** If the `PushNotification` tool is available during the run, also call it with a short message and the page URL. If it's unavailable or reports it wasn't sent, that's expected — the Notion mention is the reliable channel. Never fail the run over this.
 
 ---
 
