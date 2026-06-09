@@ -66,6 +66,7 @@ https://www.youtube.com/watch?v=D4XTefP3Lsc
 https://www.deloitte.com/us/en/insights/topics/talent/human-capital-trends/2026/human-ai-interaction-design.html
 https://newsletter.uxdesign.cc/p/on-rational-thinking-taking-action
 
+<<<<<<< Updated upstream
 # Week 6 — 2026-04-20
 https://maggieappleton.com/zero-alignment/
 https://www.youtube.com/watch?v=QVJcdfkRpH8
@@ -82,3 +83,31 @@ https://www.microsoft.com/en-us/research/blog/red-teaming-a-network-of-agents-un
 https://www.youtube.com/watch?v=mCO-D3pkviM
 https://simonwillison.net/2025/Jun/27/context-engineering/
 https://uxdesign.cc/the-web-trained-ai-to-deceive-now-designers-have-to-untrain-it-420f9d3fe78e
+=======
+# Week 6 — 2026-04-11 (Test run — retroactively logged)
+https://smashingmagazine.com/2026/04/identifying-necessary-transparency-moments-agentic-ai-part1/
+https://jakobnielsenphd.substack.com/p/workflow-redesign
+https://www.youtube.com/watch?v=txx6ec6MLNY
+https://www.youtube.com/watch?v=CeOXx-XTYek
+https://www.youtube.com/watch?v=7pI0pHq5P0Y
+https://www.amazon.science/blog/designing-ai-agents-that-know-when-to-step-back
+https://www.youtube.com/watch?v=Wop2Ko5_yuI
+
+# Week 6 — 2026-04-18
+https://anthropic.com/research/trustworthy-agents
+https://www.youtube.com/watch?v=ATt7QJgt-2k
+https://jakobnielsenphd.substack.com/p/ai-use
+https://jack-clark.net/2026/04/13/import-ai-453-breaking-ai-agents-mirrorcode-and-ten-views-on-gradual-disempowerment/
+https://www.youtube.com/watch?v=QVJcdfkRpH8
+https://anthropic.com/research/automated-alignment-researchers
+https://www.youtube.com/watch?v=eqPljh_9C9Y
+
+# Week 7 — 2026-04-19 (first run with rebalanced scoring: Audience Lanes + diversity rule)
+https://www.youtube.com/watch?v=Raa3qjEBvKE
+https://www.smashingmagazine.com/2025/09/psychology-trust-ai-guide-measuring-designing-user-confidence/
+https://www.productcompass.pm/p/ai-evals
+https://engineering.salesforce.com/grounding-enterprise-ai-with-live-web-retrieval-and-verifiable-citations/
+https://www.smashingmagazine.com/2025/07/design-patterns-ai-interfaces/
+https://mbrenndoerfer.com/writing/rag-architecture-retriever-generator-design-patterns
+https://www.youtube.com/watch?v=5ABcYSWPVr8
+>>>>>>> Stashed changes

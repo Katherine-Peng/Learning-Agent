@@ -61,6 +61,7 @@
       "WebFetch(domain:ytlarge.com)",
       "WebFetch(domain:www.amazon.science)",
       "WebFetch(domain:smashingmagazine.com)",
+<<<<<<< Updated upstream
       "WebFetch(domain:wattenberger.com)",
       "WebFetch(domain:www.langchain.com)",
       "WebFetch(domain:arxiv.org)",
@@ -70,6 +71,12 @@
       "mcp__scheduled-tasks__update_scheduled_task",
       "WebFetch(domain:itsadelriodesign.medium.com)",
       "WebFetch(domain:www.chatprd.ai)"
+=======
+      "WebFetch(domain:www.langchain.com)",
+      "WebFetch(domain:www.productcompass.pm)",
+      "WebFetch(domain:engineering.salesforce.com)",
+      "WebFetch(domain:mbrenndoerfer.com)"
+>>>>>>> Stashed changes
     ]
   }
 }
