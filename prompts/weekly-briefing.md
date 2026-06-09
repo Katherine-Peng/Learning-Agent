@@ -265,11 +265,11 @@ Create a child page under the **Learning Agent Recommendation** page (`33f82e5a-
 
 ---
 
-{Render the Source Health block below as a COLLAPSED TOGGLE so it stays tucked away at the very bottom — see the Notion enhanced-markdown spec for the exact toggle syntax.}
+{Put Source Health at the very bottom. Prefer a COLLAPSED TOGGLE (read the Notion enhanced-markdown spec for the exact toggle syntax); if a toggle can't be created reliably, fall back to a plain `## 🔧 Source Health` heading — never leave a literal ▸ character.}
 
-▸ **🔧 Source Health**
-   YouTube: {OK/Degraded/Failed} | Blogs/RSS: {OK/Degraded/Failed} | Web: {OK/Degraded/Failed}
-   {Note any feeds that returned errors or empty results}
+## 🔧 Source Health
+YouTube: {OK/Degraded/Failed} | Blogs/RSS: {OK/Degraded/Failed} | Web: {OK/Degraded/Failed}
+{Note any feeds that returned errors or empty results}
 ```
 
 ---
