@@ -1,7 +1,7 @@
 # Master Source Table — Local Cache
-> Exported from Notion on 2026-03-18
+> Originally exported from Notion on 2026-03-18; manually maintained since (last edit 2026-06-09).
 > Source: Master Source Table (32782e5a-5fa3-80de-8f18-c36ae43cffd8)
-> To refresh: re-export from Notion
+> This file is the source list the agent actually reads. To refresh, edit it directly or re-export from Notion.
 
 ## Sources
 
@@ -35,7 +35,7 @@
 | 26 | Simon Willison | 1 | AI Engineering | Blog | simonwillison.net | https://simonwillison.net/atom/everything/ | Always surface. MCP + agent posts = Must Read. |
 | 27 | Ethan Mollick | 1 | AI + Work | Substack | oneusefulthing.org | https://www.oneusefulthing.org/feed | Always surface. Every post is relevant. |
 | 28 | Lenny Rachitsky | 1 | Product | Substack | lennysnewsletter.com | https://www.lennysnewsletter.com/feed | Surface AI posts as Must Read. Prefer YouTube over paywalled text. |
-| ~~29~~ | ~~Benedict Evans~~ | — | — | — | — | — | REMOVED — RSS feed broken (404), no alternative found. Re-add if feed becomes available. |
+| 29 | Benedict Evans | 2 | Strategy | Blog | ben-evans.com/benedictevans | No RSS — WebSearch | Re-added 2026-06-09. Author **deliberately disabled RSS** (confirmed 2025) and the site returns HTTP 403 to bots, so no feed or direct fetch works. Discover via WebSearch `site:ben-evans.com/benedictevans {topic}` in the evergreen/discovery scan. Best-effort. |
 | 30 | AI Snake Oil → Normal Tech | 1 | Safety | Substack | normaltech.ai (was aisnakeoil.substack.com) | https://www.normaltech.ai/feed | Surface everything. Posts challenging mainstream claims = Must Read. Rebranded from AI Snake Oil to Normal Tech in 2026. |
 | 31 | Chip Huyen | 2 | AI Engineering | Blog | huyenchip.com | https://huyenchip.com/feed.xml | Surface systems + eval posts. |
 | 32 | Nathan Lambert | 2 | Alignment | Substack | interconnects.ai | https://www.interconnects.ai/feed | Surface alignment + behaviour posts. Skip if paywalled. |

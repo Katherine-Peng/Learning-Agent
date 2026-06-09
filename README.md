@@ -2,7 +2,7 @@
 
 A weekly AI learning curator I built for myself — and you can fork it for yours.
 
-Every Sunday at 7pm, this agent scans 49 hand-picked sources, scores everything against the topic I'm studying that week, and writes 5–7 ranked recommendations into my Notion. The whole thing is a structured prompt. No code to maintain.
+Every Sunday at 7pm, this agent scans 48 hand-picked sources, scores everything against the topic I'm studying that week, and writes 5–7 ranked recommendations into my Notion. The whole thing is a structured prompt. No code to maintain.
 
 **Built for** designers, PMs, and anyone learning AI from a non-CS background who wants the signal without the scrolling. If you can edit a Notion page, you can run this. If you can edit a markdown file, you can adapt it.
 
@@ -92,7 +92,7 @@ Full spec: [`config/scoring-algorithm.md`](https://github.com/Katherine-Peng/Lea
 
 ---
 
-## The 49 sources
+## The sources
 
 | Category | Examples | Count |
 | --- | --- | --- |
@@ -109,6 +109,13 @@ Full list with feed URLs: [`config/sources.md`](https://github.com/Katherine-Pen
 ---
 
 # 🚀 Setup
+
+## Scheduling: where it runs
+
+There are two ways to run this on a schedule:
+
+- **☁️ Cloud Routine (recommended) — runs even with your laptop closed.** Create a [Claude Code Routine](https://claude.ai/code/routines): point it at this repo, set the trigger to **Weekly · Sunday · 7:00 PM** (your local time), set the environment's **Network access to Full** (the briefing fetches ~40 RSS/web sources), and keep the **Notion** connector enabled. The routine runs `prompts/weekly-briefing.md`, writes that week's picks to your Notion **Learning Agent Recommendation** page, and @mentions you so Notion pushes a notification to your phone. Note: routines clone your repo's **default branch**, so merge prompt changes to `main` before they take effect.
+- **💻 Local Desktop scheduled task — runs on your machine.** Use the manual steps below if you'd rather it run locally (requires your machine to be on).
 
 ## Option A — Let Claude Code install it for you (recommended)
 
@@ -241,7 +248,7 @@ Learning-Agent/
 ├── prompts/
 │   └── weekly-briefing.md             ← the agent's brain
 ├── config/
-│   ├── sources.md                     ← 49 sources with feed URLs
+│   ├── sources.md                     ← 48 sources with feed URLs
 │   ├── scoring-algorithm.md           ← full scoring spec
 │   └── previously-recommended.md      ← dedup log (appended each run)
 └── logs/
