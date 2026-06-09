@@ -186,20 +186,41 @@ Create a child page under the **Learning Agent Recommendation** page (`33f82e5a-
 
 ```
 **Generated:** {date} | **Focus:** {week_topic}
-**Sources checked:** YouTube ({n} channels), Blogs/RSS ({n}), Web ({n} searches)
-**Estimated total reading time:** ~{N} hours {M} min
+**Sources checked:** YouTube ({n} channels), Blogs/RSS ({n}), Web ({n} searches) | **Reading time:** ~{N} hr {M} min
+
+---
+
+## ✨ This Week's Highlight
+{1–2 short paragraphs — the Learning-Agent's plain-prose summary of the week: what changed, what's most worth focusing on, and any notable industry news / launches / debates relevant to Week {N}. This is the "read this first" overview. (This replaces the old Signals & Patterns section and now lives at the top.)}
+
+---
+
+## ✅ Weekly plan
+{The actionable checklist — tick these off / copy into the Weekly Plan. Every item MUST include all four: tier emoji (⭐ Must Read · 🟠 Recommended · 🔵 Discovered · 🃏 Wild Card), title, estimated time, and full clickable URL.}
+
+- [ ] ⭐ {Must Read 1 title} · ~{N} min {read/watch} · {URL}
+- [ ] ⭐ {Must Read 2 title} · ~{N} min {read/watch} · {URL}
+- [ ] 🟠 {Recommended 1 title} · ~{N} min {read/watch} · {URL}
+- [ ] 🟠 {Recommended 2 title} · ~{N} min {read/watch} · {URL}
+- [ ] 🔵 {Discovered title} · ~{N} min {read/watch} · {URL}
+- [ ] 🃏 {Wild Card title} · ~{N} min {read/watch} · {URL}
+
+(Adjust lines to match actual count — hard cap 7 items total.)
 
 ---
 
 ## ⭐ Must Read
 
 ### 1. {Title}
-**{Author}** · {Platform} · {Type ~N min read/watch} · Score: {N}/100
-{URL}
+**{Author}** · {Platform} · ~{N} min {read/watch} · Score: {N}/100
+🔗 {URL}
 
-**Summary:** {One paragraph — what this content IS about. The key argument, framework, or insight. Written so Katherine can decide if she wants to read the full piece.}
+**Summary**
+- {Key point — what it is, its core argument or framework}
+- {Second bullet if needed — one idea per bullet, not a dense paragraph}
 
-**Why it matters for Week {N}:** {2-3 sentences connecting this content to her current week's learning topic, her role at Microsoft M365 Copilot, or her broader learning goals.}
+**Why it matters (Week {N})**
+- {1–2 bullets connecting it to this week's topic, her M365 Copilot work, or learning goals}
 
 ### 2. {Title}
 ...
@@ -209,65 +230,46 @@ Create a child page under the **Learning Agent Recommendation** page (`33f82e5a-
 ## 🟠 Recommended
 
 ### {N}. {Title}
-**{Author}** · {Platform} · {Type ~N min read/watch} · Score: {N}/100
-{URL}
+**{Author}** · {Platform} · ~{N} min {read/watch} · Score: {N}/100
+🔗 {URL}
 
-**Summary:** {One paragraph summary.}
+**Summary**
+- {1–2 concise bullets}
 
-**One-liner:** {Single sentence on why it's worth her time.}
+**Worth it because:** {single sentence}
 
 ...
 
 ---
 
 ## 🔵 Discovered (Beyond Your List)
-{0-2 items from broad discovery, clearly labeled as new voices}
+{0–2 items from broad discovery, clearly labeled as new voices}
 
 ### {Title}
-**{Author}** · {Platform} · {Type ~N min read/watch} · Score: {N}/100
-{URL}
+**{Author}** · {Platform} · ~{N} min {read/watch} · Score: {N}/100
+🔗 {URL}
 
-**Who is this:** {1 sentence on who this person is and why they're worth attention.}
-**Summary:** {One paragraph.}
+- **Who is this:** {1 sentence on who they are and why they're worth attention}
+- **Summary:** {1–2 bullets}
 
 ---
 
 ## 🃏 Wild Card
 
 ### {Title}
-**{Author}** · {Platform} · {Type ~N min read/watch} · Score: {N}/100
-{URL}
+**{Author}** · {Platform} · ~{N} min {read/watch} · Score: {N}/100
+🔗 {URL}
 
-**Why this is the Wild Card:** {2-3 sentences on what makes this surprising, contrarian, or cross-domain.}
-**Summary:** {One paragraph.}
-
----
-
-## 📊 Signals & Patterns
-{2-3 sentences noting patterns: "Multiple voices discussed X this week", "New tool launched relevant to Week N", "Emerging debate about Y"}
-
-## 🔧 Source Health
-YouTube: {OK/Degraded/Failed} | Blogs/RSS: {OK/Degraded/Failed} | Web: {OK/Degraded/Failed}
-{Note any feeds that returned errors or empty results}
+- **Why it's the Wild Card:** {what makes it surprising, contrarian, or cross-domain}
+- **Summary:** {1–2 bullets}
 
 ---
 
-## ✅ Checklist — Copy to Weekly Plan
+{Render the Source Health block below as a COLLAPSED TOGGLE so it stays tucked away at the very bottom — see the Notion enhanced-markdown spec for the exact toggle syntax.}
 
-CRITICAL: Every checklist item MUST include ALL of these — missing any is a bug:
-1. Tier emoji (⭐ = Must Read, 🟠 = Recommended, 🔵 = Discovered, 🃏 = Wild Card)
-2. Title
-3. Estimated time (e.g. "~15 min read" or "~45 min watch")
-4. Full clickable URL
-
-- [ ] ⭐ {Must Read 1 title} · ~{N} min {read/watch} · {URL}
-- [ ] ⭐ {Must Read 2 title} · ~{N} min {read/watch} · {URL}
-- [ ] 🟠 {Recommended 1 title} · ~{N} min {read/watch} · {URL}
-- [ ] 🟠 {Recommended 2 title} · ~{N} min {read/watch} · {URL}
-- [ ] 🔵 {Discovered title} · ~{N} min {read/watch} · {URL}
-- [ ] 🃏 {Wild Card title} · ~{N} min {read/watch} · {URL}
-
-(Adjust lines to match actual count — hard cap 7 items total)
+▸ **🔧 Source Health**
+   YouTube: {OK/Degraded/Failed} | Blogs/RSS: {OK/Degraded/Failed} | Web: {OK/Degraded/Failed}
+   {Note any feeds that returned errors or empty results}
 ```
 
 ---
@@ -320,7 +322,7 @@ After the briefing page exists, send a notification so Katherine sees it on her 
    - description: the new page URL + a one-line teaser of the top pick
    - startTime / endTime: now to now+10min, timeZone `Europe/London`
    - overrideReminders: `[{method: popup, minutes: 0}]`
-2. **Notion @mention (secondary).** Post a comment on the **newly created** Weekly Picks page with `notion-create-comment`, tagging Katherine via `rich_text` user mentions — both `1e0d872b-594c-816f-a40c-00027d528a9d` (katherinepeng.uk) and `5efdb4b6-c7ef-433b-89f4-5cb49d245f7b` (catphy0825) — plus the page URL.
+2. **Notion @mention (secondary).** Post a **short, simple** comment on the **newly created Weekly Picks page** (never the parent "Learning Agent Recommendation" page), mentioning **only** Katherine's main account `1e0d872b-594c-816f-a40c-00027d528a9d` (katherinepeng.uk). Keep it to one line, e.g. `📬 Your Week {N} picks are ready —` followed by the page link.
 3. **Claude push (best-effort).** If the `PushNotification` tool is available during the run, also call it. If not, that's expected — never fail the run over this.
 
 ---
@@ -336,6 +338,9 @@ Before creating the Notion page, verify:
 - [ ] Wild Card is genuinely surprising, not just a lower-scoring version of the same type of content
 - [ ] Source Health accurately reports which sources succeeded/failed
 - [ ] EVERY item has an estimated time (blogs: ~250 words/min; videos: use actual duration; interactive tools: estimate exploration time)
-- [ ] Checklist at bottom has ALL of: tier emoji, title, estimated time, full URL for EVERY item
+- [ ] **Weekly plan** section (near the top) has ALL of: tier emoji, title, estimated time, full URL for EVERY item
 - [ ] Total estimated reading time in header is the sum of all item times
 - [ ] Hard cap of 7 items total is respected
+- [ ] Page order is: ✨ This Week's Highlight → ✅ Weekly plan → ⭐ Must Read → 🟠 Recommended → 🔵 Discovered → 🃏 Wild Card → 🔧 Source Health (collapsed toggle at the very bottom)
+- [ ] This Week's Highlight is 1–2 short paragraphs at the top (it replaces the old Signals & Patterns)
+- [ ] Summaries use bullet points (one idea per bullet), not dense paragraphs
