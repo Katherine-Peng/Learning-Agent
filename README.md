@@ -2,7 +2,7 @@
 
 A weekly AI learning curator I built for myself — and you can fork it for yours.
 
-Every Sunday at 7pm, this agent scans 47 hand-picked sources, scores everything against the topic I'm studying that week, and writes 5–7 ranked recommendations into my Notion. The whole thing is a structured prompt. No code to maintain.
+Every Sunday at 7pm, this agent scans 48 hand-picked sources, scores everything against the topic I'm studying that week, and writes 5–7 ranked recommendations into my Notion. The whole thing is a structured prompt. No code to maintain.
 
 **Built for** designers, PMs, and anyone learning AI from a non-CS background who wants the signal without the scrolling. If you can edit a Notion page, you can run this. If you can edit a markdown file, you can adapt it.
 
@@ -248,7 +248,7 @@ Learning-Agent/
 ├── prompts/
 │   └── weekly-briefing.md             ← the agent's brain
 ├── config/
-│   ├── sources.md                     ← 47 sources with feed URLs
+│   ├── sources.md                     ← 48 sources with feed URLs
 │   ├── scoring-algorithm.md           ← full scoring spec
 │   └── previously-recommended.md      ← dedup log (appended each run)
 └── logs/
