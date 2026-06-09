@@ -315,12 +315,12 @@ Duration: {approximate}
 
 After the briefing page exists, send a notification so Katherine sees it on her phone. The **Google Calendar event is the primary channel** (it reliably pushes to her phone via her active Google account); the Notion mention is a secondary nicety.
 
-1. **Google Calendar event (primary, reliable).** Using the Google Calendar connector, create an event on her primary calendar timed to start ~2 minutes from now, with a popup reminder at 0 minutes so her phone gets an immediate push:
-   - summary: "📬 Weekly Picks — Week {N} ready ({X} items)"
+1. **Google Calendar event (primary, reliable).** Using the Google Calendar connector, create an event on her primary calendar starting at run time, **10 minutes long**, with a popup reminder at 0 minutes so her phone gets an immediate push:
+   - summary: `Learning-Agent Weekly Picks`
    - description: the new page URL + a one-line teaser of the top pick
-   - startTime / endTime: now+2min to now+32min, timeZone `Europe/London`
+   - startTime / endTime: now to now+10min, timeZone `Europe/London`
    - overrideReminders: `[{method: popup, minutes: 0}]`
-2. **Notion @mention (secondary).** Post a comment on the **newly created** Weekly Picks page with `notion-create-comment`, tagging Katherine via a `rich_text` user mention (user id `5efdb4b6-c7ef-433b-89f4-5cb49d245f7b`) plus the page URL. (Note: only reaches her phone if her Notion mobile app is signed into the account that owns this workspace.)
+2. **Notion @mention (secondary).** Post a comment on the **newly created** Weekly Picks page with `notion-create-comment`, tagging Katherine via `rich_text` user mentions — both `1e0d872b-594c-816f-a40c-00027d528a9d` (katherinepeng.uk) and `5efdb4b6-c7ef-433b-89f4-5cb49d245f7b` (catphy0825) — plus the page URL.
 3. **Claude push (best-effort).** If the `PushNotification` tool is available during the run, also call it. If not, that's expected — never fail the run over this.
 
 ---
