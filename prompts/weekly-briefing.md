@@ -313,13 +313,15 @@ Duration: {approximate}
 
 ## STEP 7 — Notify Katherine on her phone
 
-After the briefing page exists, send a notification so Katherine sees it on her phone:
+After the briefing page exists, send a notification so Katherine sees it on her phone. The **Google Calendar event is the primary channel** (it reliably pushes to her phone via her active Google account); the Notion mention is a secondary nicety.
 
-1. **Notion @mention (primary, reliable).** Post a comment on the **newly created** Weekly Picks page with `notion-create-comment`, tagging Katherine via a `rich_text` user mention (user id `5efdb4b6-c7ef-433b-89f4-5cb49d245f7b`) so Notion pushes it to her mobile app. Keep it to one line — week number, number of picks, and the page URL. Shape:
-   - text: "📬 Your Week {N} picks are ready ({X} items) — "
-   - mention: user `5efdb4b6-c7ef-433b-89f4-5cb49d245f7b`
-   - text: " {page_url}"
-2. **Claude push (best-effort).** If the `PushNotification` tool is available during the run, also call it with a short message and the page URL. If it's unavailable or reports it wasn't sent, that's expected — the Notion mention is the reliable channel. Never fail the run over this.
+1. **Google Calendar event (primary, reliable).** Using the Google Calendar connector, create an event on her primary calendar timed to start ~2 minutes from now, with a popup reminder at 0 minutes so her phone gets an immediate push:
+   - summary: "📬 Weekly Picks — Week {N} ready ({X} items)"
+   - description: the new page URL + a one-line teaser of the top pick
+   - startTime / endTime: now+2min to now+32min, timeZone `Europe/London`
+   - overrideReminders: `[{method: popup, minutes: 0}]`
+2. **Notion @mention (secondary).** Post a comment on the **newly created** Weekly Picks page with `notion-create-comment`, tagging Katherine via a `rich_text` user mention (user id `5efdb4b6-c7ef-433b-89f4-5cb49d245f7b`) plus the page URL. (Note: only reaches her phone if her Notion mobile app is signed into the account that owns this workspace.)
+3. **Claude push (best-effort).** If the `PushNotification` tool is available during the run, also call it. If not, that's expected — never fail the run over this.
 
 ---
 
