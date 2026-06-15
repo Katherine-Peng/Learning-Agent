@@ -72,6 +72,19 @@ Run two complementary scans. Budget your tool calls carefully:
 - **YouTube engagement check**: ~3-5 WebFetch calls (top candidates only)
 - **Notion write**: 1 call
 
+### Fetching discipline — beating 403 rate-limits and IP blocks
+Feeds (especially YouTube, Substack, Medium) return **HTTP 403 when the requester's IP is rate-limited or blocked** — the signature is "the first few succeed, the rest 403," or (on a datacenter/cloud IP) *wholesale* 403s. The feeds are not dead; the IP is blocked. Escalate **per feed**:
+
+1. **Fetch the feed URL directly** (fast path — works from a residential IP / laptop). Don't burst: fetch in **small sequential batches (3–4 at a time)**, not all at once.
+2. **On a 403/429, refetch the same feed through the free rss2json proxy:**
+   ```
+   https://api.rss2json.com/v1/api.json?rss_url={URL-ENCODED feed URL}
+   ```
+   URL-encode the feed URL — YouTube feeds contain `?channel_id=` and must be encoded (e.g. `https%3A%2F%2Fwww.youtube.com%2Ffeeds%2Fvideos.xml%3Fchannel_id%3D...`). The proxy fetches from its own un-blocked servers and returns the feed as JSON (`status:"ok"` + `items[]`). **This is what makes cloud/datacenter runs work** — YouTube/Substack/Medium block datacenter IPs directly but not the proxy. (Verified working for YouTube, Substack, and Medium.)
+3. **Only if the proxy also fails**, fall back to a targeted web search for that source.
+
+Never silently degrade to web-search-only. In Source Health, say which path worked, e.g. `YouTube: OK (via rss2json proxy)`.
+
 ### 2a. FRESH SCAN — What's new this week (last 7 days)
 
 **YouTube channels** (primary source):
