@@ -111,3 +111,20 @@ https://www.smashingmagazine.com/2025/07/design-patterns-ai-interfaces/
 https://mbrenndoerfer.com/writing/rag-architecture-retriever-generator-design-patterns
 https://www.youtube.com/watch?v=5ABcYSWPVr8
 >>>>>>> Stashed changes
+
+# Week 13 — 2026-06-14 (round 1 — retroactively logged; these were posted to Notion but never written to this log)
+https://www.anthropic.com/engineering/built-multi-agent-research-system
+https://aakashgupta.medium.com/building-multi-agent-systems-will-be-a-must-have-pm-skill-in-2026-30e52fd732cb
+https://www.lennysnewsletter.com/p/we-replaced-our-sales-team-with-20-ai-agents
+https://www.latent.space/p/andon
+https://www.microsoft.com/en-us/research/blog/magenticlite-magenticbrain-fara1-5-an-agentic-experience-optimized-for-small-models/
+https://arxiv.org/abs/2510.24937
+https://arxiv.org/abs/2603.02050
+
+# Week 13 — 2026-06-21 (round 2)
+https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
+https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/multi-agent-patterns
+https://arxiv.org/abs/2512.11979
+https://agentic-design.ai/patterns/ui-ux-patterns
+https://www.news.aakashg.com/p/practical-ai-agents-pms
+https://www.oneusefulthing.org/p/what-it-feels-like-to-work-with-mythos
