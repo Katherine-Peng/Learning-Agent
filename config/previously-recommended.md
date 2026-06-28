@@ -66,24 +66,6 @@ https://www.youtube.com/watch?v=D4XTefP3Lsc
 https://www.deloitte.com/us/en/insights/topics/talent/human-capital-trends/2026/human-ai-interaction-design.html
 https://newsletter.uxdesign.cc/p/on-rational-thinking-taking-action
 
-<<<<<<< Updated upstream
-# Week 6 — 2026-04-20
-https://maggieappleton.com/zero-alignment/
-https://www.youtube.com/watch?v=QVJcdfkRpH8
-https://www.youtube.com/watch?v=yyuVR-ML9X8
-https://www.youtube.com/watch?v=GEJIDLeNYXE
-https://jakobnielsenphd.substack.com/p/ai-use
-https://arxiv.org/abs/2603.13417
-https://jack-clark.net/2026/04/13/import-ai-453-breaking-ai-agents-mirrorcode-and-ten-views-on-gradual-disempowerment/
-
-# Week 7 — 2026-05-03
-https://www.youtube.com/watch?v=wUWljYoQN8g
-https://smashingmagazine.com/2026/05/designing-stable-interfaces-streaming-content/
-https://www.microsoft.com/en-us/research/blog/red-teaming-a-network-of-agents-understanding-what-breaks-when-ai-agents-interact-at-scale/
-https://www.youtube.com/watch?v=mCO-D3pkviM
-https://simonwillison.net/2025/Jun/27/context-engineering/
-https://uxdesign.cc/the-web-trained-ai-to-deceive-now-designers-have-to-untrain-it-420f9d3fe78e
-=======
 # Week 6 — 2026-04-11 (Test run — retroactively logged)
 https://smashingmagazine.com/2026/04/identifying-necessary-transparency-moments-agentic-ai-part1/
 https://jakobnielsenphd.substack.com/p/workflow-redesign
@@ -102,6 +84,12 @@ https://www.youtube.com/watch?v=QVJcdfkRpH8
 https://anthropic.com/research/automated-alignment-researchers
 https://www.youtube.com/watch?v=eqPljh_9C9Y
 
+# Week 6 — 2026-04-20
+https://maggieappleton.com/zero-alignment/
+https://www.youtube.com/watch?v=yyuVR-ML9X8
+https://www.youtube.com/watch?v=GEJIDLeNYXE
+https://arxiv.org/abs/2603.13417
+
 # Week 7 — 2026-04-19 (first run with rebalanced scoring: Audience Lanes + diversity rule)
 https://www.youtube.com/watch?v=Raa3qjEBvKE
 https://www.smashingmagazine.com/2025/09/psychology-trust-ai-guide-measuring-designing-user-confidence/
@@ -110,4 +98,36 @@ https://engineering.salesforce.com/grounding-enterprise-ai-with-live-web-retriev
 https://www.smashingmagazine.com/2025/07/design-patterns-ai-interfaces/
 https://mbrenndoerfer.com/writing/rag-architecture-retriever-generator-design-patterns
 https://www.youtube.com/watch?v=5ABcYSWPVr8
->>>>>>> Stashed changes
+
+# Week 7 — 2026-05-03
+https://www.youtube.com/watch?v=wUWljYoQN8g
+https://smashingmagazine.com/2026/05/designing-stable-interfaces-streaming-content/
+https://www.microsoft.com/en-us/research/blog/red-teaming-a-network-of-agents-understanding-what-breaks-when-ai-agents-interact-at-scale/
+https://www.youtube.com/watch?v=mCO-D3pkviM
+https://simonwillison.net/2025/Jun/27/context-engineering/
+https://uxdesign.cc/the-web-trained-ai-to-deceive-now-designers-have-to-untrain-it-420f9d3fe78e
+
+# Week 13 — 2026-06-14 (retroactively logged — was missing from dedup)
+https://www.anthropic.com/engineering/built-multi-agent-research-system
+https://aakashgupta.medium.com/building-multi-agent-systems-will-be-a-must-have-pm-skill-in-2026-30e52fd732cb
+https://www.lennysnewsletter.com/p/we-replaced-our-sales-team-with-20-ai-agents
+https://www.latent.space/p/andon
+https://www.microsoft.com/en-us/research/blog/magenticlite-magenticbrain-fara1-5-an-agentic-experience-optimized-for-small-models/
+https://arxiv.org/abs/2510.24937
+https://arxiv.org/abs/2603.02050
+
+# Week 13 — 2026-06-21 (retroactively logged — was missing from dedup)
+https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
+https://learn.microsoft.com/en-us/microsoft-copilot-studio/guidance/multi-agent-patterns
+https://arxiv.org/abs/2512.11979
+https://agentic-design.ai/patterns/ui-ux-patterns
+https://www.news.aakashg.com/p/practical-ai-agents-pms
+https://www.oneusefulthing.org/p/what-it-feels-like-to-work-with-mythos
+
+# Week 13 — 2026-06-28
+https://www.anthropic.com/engineering/harness-design-long-running-apps
+https://jakobnielsenphd.substack.com/p/no-more-ui
+https://www.lennysnewsletter.com/p/make-product-management-fun-again
+https://www.nngroup.com/articles/state-of-ux-2026/
+https://www.news.aakashg.com/p/ai-agents-pms
+https://www.oneusefulthing.org/p/co-existence-and-the-end-of-co-intelligence
