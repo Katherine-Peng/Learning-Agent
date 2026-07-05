@@ -66,7 +66,6 @@ https://www.youtube.com/watch?v=D4XTefP3Lsc
 https://www.deloitte.com/us/en/insights/topics/talent/human-capital-trends/2026/human-ai-interaction-design.html
 https://newsletter.uxdesign.cc/p/on-rational-thinking-taking-action
 
-<<<<<<< Updated upstream
 # Week 6 — 2026-04-20
 https://maggieappleton.com/zero-alignment/
 https://www.youtube.com/watch?v=QVJcdfkRpH8
@@ -83,7 +82,7 @@ https://www.microsoft.com/en-us/research/blog/red-teaming-a-network-of-agents-un
 https://www.youtube.com/watch?v=mCO-D3pkviM
 https://simonwillison.net/2025/Jun/27/context-engineering/
 https://uxdesign.cc/the-web-trained-ai-to-deceive-now-designers-have-to-untrain-it-420f9d3fe78e
-=======
+
 # Week 6 — 2026-04-11 (Test run — retroactively logged)
 https://smashingmagazine.com/2026/04/identifying-necessary-transparency-moments-agentic-ai-part1/
 https://jakobnielsenphd.substack.com/p/workflow-redesign
@@ -110,7 +109,6 @@ https://engineering.salesforce.com/grounding-enterprise-ai-with-live-web-retriev
 https://www.smashingmagazine.com/2025/07/design-patterns-ai-interfaces/
 https://mbrenndoerfer.com/writing/rag-architecture-retriever-generator-design-patterns
 https://www.youtube.com/watch?v=5ABcYSWPVr8
->>>>>>> Stashed changes
 
 # Backfill — prior Week 13 briefings (were posted to Notion but never logged here; added 2026-07-05 to fix dedup drift)
 # Week 13 — 2026-06-14

@@ -56,7 +56,6 @@
 | 47 | Harrison Chase | 2 | Agents | Blog | blog.langchain.dev | https://www.langchain.com/blog/rss | Surface architecture posts. Skip product announcements. Feed updated 2026-04-18 — old URL `blog.langchain.com/rss` permanent-redirects to this one. |
 | 48 | Nadia Piet / AIxDESIGN | 2 | Design x AI | Blog | aixdesign.co | | Manual check monthly. Surface toolkit updates. |
 | 49 | Design Better | 2 | Design Leadership | YouTube | youtube.com/@designbetterpod | https://www.youtube.com/feeds/videos.xml?channel_id=UCMVvDE1tbXNoOpoUaMk6iUw | Casual viewing. Surface design leadership + AI design interviews. Skip episodes on non-AI topics unless guest is exceptional. |
-<<<<<<< Updated upstream
 | 50 | Aakash Gupta — Product Growth | 2 | Product | Substack | news.aakashg.com | https://www.news.aakashg.com/feed | Surface AI-for-PM posts: evals for PMs, AI product playbooks, agent product strategy. Practitioner PM voice — Lenny-tier for product. Skip pure career/interview-prep posts. (Feed verified live 2026-06.) |
 | 51 | Hard Fork (NYT) | 2 | Strategy / Culture | Podcast | nytimes.com/column/hard-fork | https://feeds.simplecast.com/l2i9YnTd | Kevin Roose + Casey Newton. Audio-only (no YouTube) — judge from episode title + description. Surface AI policy, product launches, agent/Copilot, and AI-culture segments. Skip non-AI tech-news episodes. (Feed verified live 2026-06.) |
 | 52 | Every — "AI & I" (Dan Shipper) | 2 | Building / Product | Podcast + Essays | every.to/podcast · every.to/@danshipper | No RSS — manual | How real people (founders, writers, designers) actually use AI day-to-day. No clean RSS on Every's platform. Manual/discovery: WebFetch every.to/podcast + the AI & I YouTube playlist (PLuMcoKK9mKgHtW_o9h5sGO2vXrffKHwJL), and lean on web search for "Dan Shipper" / "AI & I". Closest in spirit to Lenny. |
@@ -81,7 +80,6 @@ Curated handles to check as a **secondary, best-effort** signal (see the X step 
 | 2 | @aakashg0 | Aakash Gupta | AI for PMs, evals, product playbooks. |
 | 2 | @danshipper | Dan Shipper | Every / AI & I — how people actually use AI. |
 | 2 | @hwchase17 | Harrison Chase | LangChain; agent architecture. |
-=======
 
 ---
 
@@ -105,5 +103,3 @@ Proposed new Tier 1/2 voices to fill the product + design gap. Katherine reviews
 2. Confirm posted content in last 90 days (active signal)
 3. Read 2-3 recent posts to confirm lane + Tier
 4. Add to live table with number, write Agent Notes, done.
-
->>>>>>> Stashed changes
