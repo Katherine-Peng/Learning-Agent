@@ -111,3 +111,12 @@ https://www.smashingmagazine.com/2025/07/design-patterns-ai-interfaces/
 https://mbrenndoerfer.com/writing/rag-architecture-retriever-generator-design-patterns
 https://www.youtube.com/watch?v=5ABcYSWPVr8
 >>>>>>> Stashed changes
+
+# Week 14 — 2026-07-12 (advanced from Week 13 — briefed 4x, pool exhausted; see run log)
+https://www.anthropic.com/engineering/writing-tools-for-agents
+https://www.smashingmagazine.com/2026/05/practical-interface-patterns-ai-transparency/
+https://www.oneusefulthing.org/p/management-as-ai-superpower
+https://www.anthropic.com/engineering/advanced-tool-use
+https://lukew.com/ff/entry.asp?2142=
+https://medium.com/@netmohan97/what-building-ai-agent-skills-taught-me-about-product-management-in-the-ai-era-a7235a250431
+https://simonwillison.net/2026/jul/3/judgement/
